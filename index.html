@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="homepage.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Categories</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9fb;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        nav a {
+            margin: 0 1.5rem;
+            text-decoration: none;
+            color: #6c5ce7;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a29bfe;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .category-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #6c5ce7;
+        }
+
+        .mobile-ads {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .mobile-ad {
+            flex: 1 1 calc(25% - 1rem);
+            background: #e0e0e0;
+            border-radius: 5px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .mobile-ad img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .mobile-ad h3 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-ad {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-ad {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mobile Categories</h1>
+        <p>Your guide to the latest phones from Samsung, Nokia, Sony, and Apple</p>
+    </header>
+
+    <nav>
+        <a href="#samsung">Samsung</a>
+        <a href="#nokia">Nokia</a>
+        <a href="#sony">Sony</a>
+        <a href="#apple">Apple</a>
+    </nav>
+
+    <div class="container">
+        <!-- Samsung Section -->
+        <section id="samsung" class="category-section">
+            <h2>Samsung Phones</h2>
+            <div class="mobile-ads">
+                <div class="mobile-ad">
+                    <img src="samsung.jpg" alt="Samsung Galaxy A06">
+                    <h3>Samsung Galaxy A06</h3>
+                    <p>Latest flagship phone with powerful features</p>
+                </div>
+                <div class="mobile-ad">
+                    <img src="JJ.jfif" alt="Samsung Galaxy A72">
+                    <h3>Samsung Galaxy A72</h3>
+                    <p>Mid-range phone with great performance</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nokia Section -->
+        <section id="nokia" class="category-section">
+            <h2>Nokia Phones</h2>
+            <div class="mobile-ads">
+                <div class="mobile-ad">
+                    <img src="download.jfif" alt="Nokia 3998">
+                    <h3>Nokia 8.3</h3>
+                    <p>Durable design with great camera</p>
+                </div>
+                <div class="mobile-ad">
+                    <img src="HUAWEI.jfif" alt="Nokia 5.4">
+                    <h3>Nokia 5.4</h3>
+                    <p>Affordable option with a clean UI</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sony Section -->
+        <section id="sony" class="category-section">
+            <h2>Sony Phones</h2>
+            <div class="mobile-ads">
+                <div class="mobile-ad">
+                    <img src="images (3).jfif" alt="Sony Xperia 1 II">
+                    <h3>Sony Xperia 1 II</h3>
+                    <p>Flagship with 4K OLED display</p>
+                </div>
+                <div class="mobile-ad">
+                    <img src="images (3).jfif" alt="Sony Xperia 5 II">
+                    <h3>Sony Xperia 5 II</h3>
+                    <p>Compact and powerful phone</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apple Section -->
+        <section id="apple" class="category-section">
+            <h2>Apple Phones</h2>
+            <div class="mobile-ads">
+                <div class="mobile-ad">
+                    <img src="IPHONE.png" alt="iPhone 15 Pro">
+                    <h3>iPhone 15 PRO </h3>
+                    <p>Premium phone with advanced camera features</p>
+                </div>
+                <div class="mobile-ad">
+                    <img src="3bacc9505f1f3e802edf773b4b6c26de.png" alt="iPhone 15">
+                    <h3>iPhone 15</h3>
+                    <p>Compact design with great performance</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+    
+                <div class="row">
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="display flex">
+                    E-Project Copyright   2024 e-project - All rights reserved || Designed By: suleman and kirsh
+                </div>
+            </div>
+    </footer>
+    </div>
+</body>
+</html>

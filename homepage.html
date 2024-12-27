@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASK ME - Mobile Information Hub</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9fb;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        nav a {
+            margin: 0 1.5rem;
+            text-decoration: none;
+            color: #6c5ce7;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a29bfe;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 1rem;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            list-style: none;
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            padding: 0.5rem 1rem;
+        }
+
+        nav ul li ul li a {
+            text-decoration: none;
+            color: #6c5ce7;
+            font-weight: normal;
+            transition: color 0.3s;
+        }
+
+        nav ul li ul li a:hover {
+            color: #a29bfe;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #6c5ce7;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .card button {
+            background: #6c5ce7;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .card button:hover {
+            background: #a29bfe;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .comparison-table th {
+            background: #6c5ce7;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            background: #6c5ce7;
+            color: #fff;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffeaa7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 0.5rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>ASK ME</h1>
+        <p>Your one-stop solution for mobile phone information</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#brands">Brands</a></li>
+            <li><a href="#comparison">Comparison</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li>
+                <a href="#">Mobiles</a>
+                <ul>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Nokia</a></li>
+                    <li><a href="#">Sony</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="card">
+            <h2>Welcome to Ask me mobile</h2>
+            <p>Discover detailed and updated information about various mobile phones, compare features, and find your perfect match!</p>
+        </section>
+
+        <section id="brands" class="card">
+            <h2>Popular Mobile Brands</h2>
+            <ul>
+                <li><button onclick="showBrand('Nokia')">Nokia</button></li>
+                <li><button onclick="showBrand('Samsung')">Samsung</button></li>
+                <li><button onclick="showBrand('Apple')">Apple</button></li>
+                <li><button onclick="showBrand('Sony')">Sony</button></li>
+            </ul>
+        </section>
+
+        <section id="comparison" class="card">
+            <h2>Phone Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Phone 1</th>
+                        <th>Phone 2</th>
+                        <th>Phone 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Battery</td>
+                        <td>4000 mAh</td>
+                        <td>4500 mAh</td>
+                        <td>4200 mAh</td>
+                    </tr>
+                    <tr>
+                        <td>Camera</td>
+                        <td>12 MP</td>
+                        <td>48 MP</td>
+                        <td>64 MP</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>$500</td>
+                        <td>$700</td>
+                        <td>$650</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> STREET #19 KARACHI PAKISTAN</p>
+            <p><strong>Phone:</strong> +9267698699, 2466, 2469</p>
+            <p><strong>Email:</strong> <a href="mailto:suleman2408b@cellinfo.com">webmaster@cellinfo.com</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+    
+                <div class="row">
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    E-Project Copyright Â© 2024 e-project - All rights reserved || Designed By: E-Project
+                </div>
+            </div>
+    </footer>
+
+    <script>
+        function showBrand(brand) {
+            alert(`${brand} phones are now displayed.`);
+        }
+    </script>
+</body>
+</html>
